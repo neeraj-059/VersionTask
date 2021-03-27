@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Countdown page</title>
+        <style>
+           
+            *{margin: 0; padding: 0; font-family: OCR A Std, monospace;}
+            div{
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;    
+            }
+            
+            p{
+                height: 100px;
+                width: 600px;
+                border-radius: 10px;
+                box-shadow: inset 0 0 10px #0a0a0a;
+                color: rgb(0, 0, 0);
+                line-height: 100px;
+                text-align: center;
+                font-size: 60px;
+                box-shadow: -1px 5px 10px 6px rgba(230, 38, 38, 0.75);
+                
+                }
+            h2{
+                font-size: 90px;
+                font-family: Brush Script MT, Brush Script Std, cursive;
+                color: rgb(253, 5, 5);
+            }
+            h1{
+                font-size: 120px;
+                font-family: Brush Script MT, Brush Script Std, cursive;
+                color: rgb(0, 0, 0);
+            }
+           
+            body{
+                margin: 0;
+                padding: 0;
+                background: url('https://www.teahub.io/photos/full/313-3134560_happy-birthday-yellow-background-postcard-greeting-happy-birthday.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+            </style>
+        </head>
+        <body>
+            <div>
+                <h1>Birthday</h1>
+                <h2>Coming in...</h2>
+                <p id="demo"></p>
+                </div>
+                <script>
+                    var dest= new Date("oct 3,2021 24:00:00").getTime();
+                    var x = setInterval(function()
+                    {
+                    var curr= new Date().getTime();
+                    var diff = dest - curr;
+                    var days = Math.floor(diff/(1000*60*60*24));
+                    var hrs = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+                    var mins = Math.floor((diff%(1000*60*60))/(1000*60));
+                    var secs = Math.floor((diff%(1000*60))/(1000));
+                    document.getElementById("demo").innerHTML= days +"d:" +hrs + "hrs:" + mins +"m:"+ secs +"s"
+                    },1000);
+                    </script>
+            </body>>
+    </html>>
